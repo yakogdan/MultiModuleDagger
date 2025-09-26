@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MultiModuleDagger"
 include(":app")
- 
+include(":core")
