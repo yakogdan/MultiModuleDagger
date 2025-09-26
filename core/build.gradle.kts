@@ -35,4 +35,9 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+
+    // Retrofit + Serialization
+    implementation(libs.retrofit)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.kotlinx.serialization.converter)
 }
