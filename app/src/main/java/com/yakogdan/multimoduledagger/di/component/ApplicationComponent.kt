@@ -1,4 +1,4 @@
-package com.yakogdan.multimoduledagger.di.components
+package com.yakogdan.multimoduledagger.di.component
 
 import android.app.Application
 import com.yakogdan.multimoduledagger.activity.MainActivity

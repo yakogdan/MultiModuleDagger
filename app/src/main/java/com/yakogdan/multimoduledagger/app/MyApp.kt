@@ -1,7 +1,7 @@
 package com.yakogdan.multimoduledagger.app
 
 import android.app.Application
-import com.yakogdan.multimoduledagger.di.components.DaggerApplicationComponent
+import com.yakogdan.multimoduledagger.di.component.DaggerApplicationComponent
 
 class MyApp : Application() {
 
