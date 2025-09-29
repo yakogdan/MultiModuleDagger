@@ -44,6 +44,9 @@ dependencies {
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
+    // Inject
+    implementation(libs.javax.inject)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
