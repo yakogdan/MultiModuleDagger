@@ -35,11 +35,16 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(project(":core"))
+    implementation(project(":feature:home"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
