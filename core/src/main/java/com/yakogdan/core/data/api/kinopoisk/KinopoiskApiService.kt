@@ -1,6 +1,6 @@
-package com.yakogdan.core.api.kinopoisk
+package com.yakogdan.core.data.api.kinopoisk
 
-import com.yakogdan.core.api.kinopoisk.dto.FilmDTO
+import com.yakogdan.core.data.api.kinopoisk.dto.FilmDTO
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Path

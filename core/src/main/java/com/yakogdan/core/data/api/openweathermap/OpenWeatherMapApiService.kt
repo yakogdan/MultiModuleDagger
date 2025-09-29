@@ -1,6 +1,6 @@
-package com.yakogdan.core.api.openweathermap
+package com.yakogdan.core.data.api.openweathermap
 
-import com.yakogdan.core.api.openweathermap.dto.CurrentWeather
+import com.yakogdan.core.data.api.openweathermap.dto.CurrentWeather
 import retrofit2.http.GET
 import retrofit2.http.Query
 

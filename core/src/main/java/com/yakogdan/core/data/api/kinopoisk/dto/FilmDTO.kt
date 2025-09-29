@@ -1,4 +1,4 @@
-package com.yakogdan.core.api.kinopoisk.dto
+package com.yakogdan.core.data.api.kinopoisk.dto
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

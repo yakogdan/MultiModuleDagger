@@ -1,4 +1,4 @@
-package com.yakogdan.core.api.openweathermap
+package com.yakogdan.core.data.api.kinopoisk
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -6,9 +6,9 @@ import okhttp3.MediaType
 import retrofit2.Retrofit
 import retrofit2.create
 
-object OpenWeatherMapApiFactory {
+object KinopoiskApiFactory {
 
-    private const val BASE_URL = "https://api.openweathermap.org/"
+    private const val BASE_URL = "https://kinopoiskapiunofficial.tech/"
 
     private val json: Json = Json { ignoreUnknownKeys = true }
 
@@ -17,5 +17,5 @@ object OpenWeatherMapApiFactory {
         .addConverterFactory(json.asConverterFactory(MediaType.get("application/json")))
         .build()
 
-    val openWeatherMapApiService: OpenWeatherMapApiService = retrofit.create()
+    val kinopoiskApiService: KinopoiskApiService = retrofit.create()
 }

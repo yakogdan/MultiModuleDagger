@@ -1,4 +1,4 @@
-package com.yakogdan.core.api.openweathermap.dto
+package com.yakogdan.core.data.api.openweathermap.dto
 
 
 import kotlinx.serialization.SerialName
