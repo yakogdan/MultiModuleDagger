@@ -8,11 +8,7 @@ import dagger.BindsInstance
 import dagger.Component
 
 @ApplicationScope
-@Component(
-    modules = [
-
-    ]
-)
+@Component()
 interface ApplicationComponent {
 
     fun inject(activity: MainActivity)

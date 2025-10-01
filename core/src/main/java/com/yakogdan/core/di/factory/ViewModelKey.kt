@@ -1,4 +1,4 @@
-package com.yakogdan.core.di.factories
+package com.yakogdan.core.di.factory
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
