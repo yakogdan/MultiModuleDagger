@@ -5,13 +5,13 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Weather(
-    @SerialName("description")
-    val description: String?,
-    @SerialName("icon")
-    val icon: String?,
+data class CurrentWeatherDTO(
     @SerialName("id")
-    val id: Int?,
+    val id: Int,
     @SerialName("main")
-    val main: String?
+    val main: MainDTO,
+    @SerialName("name")
+    val name: String?,
+    @SerialName("weather")
+    val weather: List<WeatherDTO?>?,
 )
