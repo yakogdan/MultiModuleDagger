@@ -1,4 +1,4 @@
-package com.yakogdan.home
+package com.yakogdan.home.state
 
 import com.yakogdan.core.domain.model.FilmModel
 

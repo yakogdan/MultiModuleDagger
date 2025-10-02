@@ -11,6 +11,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.yakogdan.core.di.dependencies.CoreDependenciesProvider
 import com.yakogdan.home.databinding.FragmentHomeBinding
 import com.yakogdan.home.di.DaggerHomeComponent
+import com.yakogdan.home.state.FilmScreenState
+import com.yakogdan.home.state.WeatherScreenState
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -41,12 +43,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.bind(view)
 
         viewModel.loadFilm(filmId = 258687)
+        viewModel.loadWeather(city = "Иркутск")
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                launch {
-                    processFilmScreenState()
-                }
+                launch { processFilmScreenState() }
+                launch { processWeatherScreenState() }
             }
         }
 
@@ -70,6 +72,31 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
 
                 FilmScreenState.Initial -> {}
+            }
+        }
+    }
+
+    private suspend fun processWeatherScreenState(): Nothing {
+        viewModel.weatherScreenState.collect { screenState ->
+
+            when (screenState) {
+
+                WeatherScreenState.Loading -> {
+                    binding.tvWeather.text = "Loading..."
+                }
+
+                is WeatherScreenState.Content -> {
+                    screenState.weather.apply {
+                        val weatherText = "$city $temp°C $description"
+                        binding.tvWeather.text = weatherText
+                    }
+                }
+
+                is WeatherScreenState.Error -> {
+                    binding.tvWeather.text = screenState.throwable.message
+                }
+
+                WeatherScreenState.Initial -> {}
             }
         }
     }
