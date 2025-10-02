@@ -1,6 +1,6 @@
 package com.yakogdan.core.data.api.openweathermap
 
-import com.yakogdan.core.data.api.openweathermap.dto.CurrentWeather
+import com.yakogdan.core.data.api.openweathermap.dto.CurrentWeatherDTO
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,7 +12,7 @@ interface OpenWeatherMapApiService {
         @Query("appid") apiKey: String = API_KEY,
         @Query("lang") lang: String = "ru",
         @Query("units") units: String = "metric"
-    ): CurrentWeather
+    ): CurrentWeatherDTO
 
     companion object {
         private const val API_KEY = "e98a5f2a5a5ca9c353c06b901f89834e"
