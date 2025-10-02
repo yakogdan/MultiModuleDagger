@@ -8,7 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 
 @Module
-interface HomeModule {
+internal interface HomeModule {
 
     @Binds
     @[IntoMap ViewModelKey(HomeViewModel::class)]

@@ -9,7 +9,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-interface FilmModule {
+internal interface FilmModule {
 
     @Binds
     fun bindFilmRepository(repoImpl: FilmRepoImpl): FilmRepository
