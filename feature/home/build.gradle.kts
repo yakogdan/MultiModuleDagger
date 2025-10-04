@@ -43,13 +43,14 @@ dependencies {
 
     implementation(project(":core"))
 
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
-    // Dagger
-    implementation(libs.dagger.core)
-    ksp(libs.dagger.compiler)
+    // Koin
+    implementation(libs.koin.android)
+    implementation(libs.koin.annotations)
+    ksp(libs.koin.ksp)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.material)
 }

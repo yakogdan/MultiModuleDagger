@@ -4,9 +4,8 @@ import com.yakogdan.core.data.api.kinopoisk.KinopoiskApiService
 import com.yakogdan.core.data.api.kinopoisk.mapper.toModel
 import com.yakogdan.core.domain.model.FilmModel
 import com.yakogdan.core.domain.repository.FilmRepository
-import javax.inject.Inject
 
-class FilmRepoImpl @Inject constructor(
+class FilmRepoImpl(
     private val kinopoiskApiService: KinopoiskApiService,
 ) : FilmRepository {
 

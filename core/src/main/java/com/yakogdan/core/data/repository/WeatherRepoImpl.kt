@@ -4,9 +4,8 @@ import com.yakogdan.core.data.api.openweathermap.OpenWeatherMapApiService
 import com.yakogdan.core.data.api.openweathermap.mapper.toModel
 import com.yakogdan.core.domain.model.WeatherModel
 import com.yakogdan.core.domain.repository.WeatherRepository
-import javax.inject.Inject
 
-class WeatherRepoImpl @Inject constructor(
+class WeatherRepoImpl(
     private val weatherApiService: OpenWeatherMapApiService,
 ) : WeatherRepository {
 

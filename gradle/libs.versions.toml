@@ -10,8 +10,8 @@ constraintlayout = "2.2.1"
 kotlinx-serialization-json = "1.9.0"
 retrofit = "2.11.0"
 ksp = "2.1.20-1.0.31"
-dagger = "2.57.2"
-javaxInject = "1"
+koin = "4.1.1"
+koin-annotations = "2.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -23,9 +23,9 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "1.0.0" }
-dagger-core = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
-javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+koin-ksp = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

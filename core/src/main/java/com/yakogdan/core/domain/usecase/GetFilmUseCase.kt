@@ -2,9 +2,8 @@ package com.yakogdan.core.domain.usecase
 
 import com.yakogdan.core.domain.model.FilmModel
 import com.yakogdan.core.domain.repository.FilmRepository
-import javax.inject.Inject
 
-class GetFilmUseCase @Inject constructor(
+class GetFilmUseCase(
     private val repository: FilmRepository,
 ) {
 

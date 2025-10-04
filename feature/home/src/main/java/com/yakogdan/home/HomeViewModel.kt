@@ -12,9 +12,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-class HomeViewModel @Inject constructor(
+class HomeViewModel(
     private val getFilmUseCase: GetFilmUseCase,
     private val getWeatherUseCase: GetWeatherUseCase,
 ) : ViewModel() {

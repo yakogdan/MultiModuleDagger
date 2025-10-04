@@ -53,7 +53,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // Dagger
-    implementation(libs.dagger.core)
-    ksp(libs.dagger.compiler)
+    // Koin
+    implementation(libs.koin.android)
+    implementation(libs.koin.annotations)
+    ksp(libs.koin.ksp)
 }
